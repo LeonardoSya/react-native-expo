@@ -1,4 +1,4 @@
-import RegisterComponent from "./register"
+import RegisterComponent from "./registration/registration"
 
 const User = ({ navigation }) => {
     return (
