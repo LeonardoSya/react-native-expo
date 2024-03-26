@@ -5,7 +5,9 @@ import { cardStyles } from '@/assets/styles/community-styles'
 
 const CardComponent = ({ item }) => {
     return (
-        <Card>
+        <Card
+            containerStyle={cardStyles.cardContainer}
+        >
             <View style={cardStyles.cardHeader}>
                 <Avatar
                     size={50}
@@ -21,7 +23,7 @@ const CardComponent = ({ item }) => {
             <Card.Image
                 source={{ uri: item.imageUri }}
             />
-            <Text style={cardStyles.text_lev1}>{item.activity}</Text>
+            <Text style={cardStyles.text_lev1}>{item.title}</Text>
             <Text>{item.location}</Text>
             <View style={cardStyles.explorationInfo}>
                 <Text style={cardStyles.text_lev3}>Length</Text>
@@ -29,18 +31,17 @@ const CardComponent = ({ item }) => {
                 <Text style={cardStyles.text_lev3}>Time</Text>
                 <Text>{item.time}</Text>
             </View>
-            <Text>{item.comment}</Text>
+            <Text>{item.content}</Text>
             <View style={cardStyles.likeAndComment}>
                 <View style={cardStyles.cardIcon}>
                     <MaterialCommunityIcons name="cards-heart-outline" size={24} color="#237804" />
-                    <Text>Like</Text>
+                    <Text>{item.likes}</Text>
                 </View>
                 <View style={cardStyles.cardIcon}>
                     <FontAwesome5 name="comment" size={20} color="#237804" />
-                    <Text>Comment</Text>
+                    <Text>{item.comments}</Text>
                 </View>
             </View>
-
         </Card>
     )
 }

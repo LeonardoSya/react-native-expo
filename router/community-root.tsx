@@ -10,7 +10,7 @@ const Community = () => {
     return (
         <Tab.Navigator>
             <Tab.Screen name="Interesting" component={InterestingScreen} />
-            <Tab.Screen name="Following" component={FollowingScreen} />
+            <Tab.Screen name="Following" component={InterestingScreen} />
         </Tab.Navigator>
     )
 }

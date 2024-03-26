@@ -17,6 +17,18 @@ export const cardStyles = StyleSheet.create({
         color: '#8c8c8c',
     },
 
+    cardContainer: {
+        marginVertical: 10,
+        marginHorizontal: 10,
+        backgroundColor: '#fff',
+        borderRadius: 20,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 0,
+        },
+    },
+
     cardHeader: {
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -45,7 +57,7 @@ export const cardStyles = StyleSheet.create({
     },
 
     cardIcon: {
-        flex:0,
+        flex: 0,
         flexDirection: 'row',
         marginHorizontal: 10,
     }
